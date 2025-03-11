@@ -967,6 +967,13 @@ section,
   padding-right: 6px;
 }
 
+.about .carousel img {
+  box-shadow: 11px 5px 25px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1334,89 +1341,86 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-wrap {
-  margin-bottom: 30px;
+
+.contact .contect {
+  border: 1px solid #14264f;
+  padding: 12px 12px 12px 12px;
+  box-shadow: 0px 15px 58px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  background: #fff;
 }
 
-.contact .info-item i {
+
+.contact .info {
+  width: 100%;
+}
+
+.contact .info i {
   font-size: 20px;
-  color: var(--accent-color);
-  width: 56px;
-  height: 56px;
+  background: #14264f;
+  color: #fff;
+  float: left;
+  width: 44px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
-  margin-right: 15px;
 }
 
-.contact .info-item h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 5px 0;
-  font-family: var(--default-font);
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #14264f;
+  font-family: 'Poppins', sans-serif;
 }
 
-.contact .info-item p {
-  padding: 0;
+.contact .info p {
+  padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
+  color: #000;
 }
 
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+.contact .info a {
+  color: #000;
 }
 
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
+.contact .info a:hover {
+  color: #D3A134;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--default-color);
-  background: var(--accent-color);
-  font-weight: 400;
-  font-size: 14px;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 40px;
+.contact button {
+  background: #14264f;
   border: 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+.contact button:hover {
+  background: #07d800;
+  border-color: #07d800;
+  color: #fff;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*--------------------------------------------------------------
