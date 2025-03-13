@@ -12,20 +12,21 @@
 :root {
   --default-font: century-ghotic;
   --heading-font: moredya;
-  --nav-font: century-ghotic;
+  --nav-font: century-ghotic;  
 }
 
 :root {
-  --background-color: #a09a75;
-  --default-color: #fafafa;
-  --heading-color: #ffffff;
-  --accent-color: #ae6332;
+  --background-color: #f2e2d5;
+  --default-color: #ae6332;
+  --heading-color: #ae6332;
+  --accent-color: #a09a75;
   --surface-color: #1a1a1a;
   --contrast-color: #ffffff;
+  
 }
 
 :root {
-  --nav-color: rgba(255, 255, 255, 0.5);
+  --nav-color: ae6332;
   --nav-hover-color: #ffffff;
   --nav-mobile-background-color: #1a1a1a;
   --nav-dropdown-background-color: #1a1a1a;
@@ -136,12 +137,13 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  border-bottom: 1px solid var(--background-color);
+  transition: all 0.5s;
+}
+
+.header.header-transparent {
+  background: transparent;
 }
 
 .header .logo {
@@ -149,8 +151,9 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 90px;
+  max-height: 50px;
   margin-right: 8px;
+  background: url(../img/logo_terra.png);
 }
 
 .header .header-social-links {
@@ -200,7 +203,19 @@ h6 {
 }
 
 .scrolled .header {
-  background: #060606;
+  padding: 5px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid var(--background-color);
+}
+
+.scrolled .header {
+  background: var(--accent-color);
+}
+
+.scrolled .header .logo img {
+  max-height: 115px;
+  margin-right: 1px;
 }
 
 /*--------------------------------------------------------------
