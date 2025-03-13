@@ -16,7 +16,7 @@
 }
 
 :root {
-  --background-color: #cdd6ba;
+  --background-color: #a09a75;
   --default-color: #fafafa;
   --heading-color: #ffffff;
   --accent-color: #ae6332;
@@ -200,7 +200,7 @@ h6 {
 }
 
 .scrolled .header {
-  border-color: color-mix(in srgb, var(--background-color) 90%, white 20%);
+  background: #060606;
 }
 
 /*--------------------------------------------------------------
