@@ -214,7 +214,7 @@ h6 {
 }
 
 .scrolled .header .logo img {
-  max-height: 115px;
+  max-height: 90px;
   margin-right: 1px;
 }
 
@@ -279,7 +279,7 @@ h6 {
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    background: var(--accent-color);
     display: block;
     position: absolute;
     visibility: hidden;
@@ -299,7 +299,7 @@ h6 {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--nav-dropdown-color);
+    color: var(--background-color);
   }
 
   .navmenu .dropdown ul a i {
@@ -463,8 +463,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   --background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  border-top: 2px solid color-mix(in srgb, var(--default-color
-  ), transparent 90%);
+  border-top: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
   background-color: var(--accent-color);
   font-size: 14px;
@@ -506,14 +505,14 @@ h6 {
   color: var(--contrast-color);
 }
 
-.footer .credits a{
+.footer .credits a {
   margin-top: 10px;
   font-size: 13px;
   text-align: center;
   color: var(--nav-dropdown-background-color);
 }
 
-.footer .credits a:hover{
+.footer .credits a:hover {
   margin-top: 10px;
   font-size: 13px;
   text-align: center;
@@ -842,6 +841,14 @@ section,
   background-size: cover;
   padding: 0;
   overflow: hidden;
+}
+
+@media (max-width: 740px) {
+  #hero {
+    margin-top: 10px;
+    width: 100%;
+    height: 23vh;
+  }
 }
 
 /*--------------------------------------------------------------
