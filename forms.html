@@ -33,9 +33,18 @@
 <body class="index-page">
 
     <div class="container mt-5">
-        <h2 class="text-center">Formulário De Planejamento de Ensaio</h2>
-        <p class="text-center">Olá, gravidinha maravilhosa! Preencha o formulário para planejarmos o seu ensaio
-            perfeito!</p>
+
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="./assets/img/logo_terra.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-6 text-center align-items-center">
+                <h2>Formulário De Planejamento de Ensaio</h2>
+                <p>Olá, gravidinha maravilhosa! Preencha o formulário para planejarmos o seu ensaio
+                    perfeito!</p>
+            </div>
+        </div>
+
         <form>
             <div class="mb-3">
                 <label class="form-label">Seu nome completo</label>
@@ -45,6 +54,7 @@
             <div class="mb-3">
                 <label class="form-label">Qual o sexo do bebê?</label>
                 <select class="form-select" required>
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Menina</option>
                     <option>Menino</option>
                     <option>Ainda não sei</option>
@@ -94,6 +104,7 @@
             <div class="mb-3">
                 <label class="form-label">O pai do bebê participará da sessão?</label>
                 <select class="form-select">
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Sim</option>
                     <option>Não</option>
                 </select>
@@ -107,6 +118,7 @@
             <div class="mb-3">
                 <label class="form-label">Qual estilo você gosta?</label>
                 <select class="form-select" multiple>
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Clássico</option>
                     <option>Diferente</option>
                     <option>Despojado</option>
@@ -143,6 +155,7 @@
             <div class="mb-3">
                 <label class="form-label">Aceitaria que uma das produções seja escolhida e montada por nós?</label>
                 <select class="form-select">
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Sim</option>
                     <option>Não</option>
                     <option>Talvez</option>
@@ -152,6 +165,7 @@
             <div class="mb-3">
                 <label class="form-label">Você gostaria de incluir maquiagem no seu ensaio?</label>
                 <select class="form-select">
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Sim</option>
                     <option>Não</option>
                 </select>
@@ -160,6 +174,7 @@
             <div class="mb-3">
                 <label class="form-label">Você gostaria de incluir finalização do cabelo no seu ensaio?</label>
                 <select class="form-select">
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Sim</option>
                     <option>Não</option>
                 </select>
@@ -168,6 +183,7 @@
             <div class="mb-3">
                 <label class="form-label">Você possui a linha Nigra na barriguinha?</label>
                 <select class="form-select">
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Tenho e gostaria de tirar.</option>
                     <option>Tenho, mas não quero tirar.</option>
                     <option>Não tenho.</option>
@@ -177,6 +193,7 @@
             <div class="mb-3">
                 <label class="form-label">Você gostaria de remover na edição estrias e celulites caso tenha?</label>
                 <select class="form-select">
+                    <option disabled selected>Selecione a opção...</option>
                     <option>Sim</option>
                     <option>Não</option>
                 </select>
@@ -187,7 +204,10 @@
                 <textarea class="form-control"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary ">Enviar</button>
+            </div>
+
         </form>
     </div>
 
