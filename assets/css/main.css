@@ -894,7 +894,7 @@ section,
 #banner h1 {
   margin: 0 0 10px 0;
   font-size: 75px;
-  font-family: "Satisfy", serif;
+  font-family: var(--heading-font);
   color: #fff;
 }
 
@@ -1020,6 +1020,10 @@ section,
   font-size: 24px;
 }
 
+.about .content p {
+  font-size: 20px;
+}
+
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -1054,7 +1058,7 @@ section,
   padding-right: 6px;
 }
 
-.about .carousel img {
+.about .cstudio {
   box-shadow: 11px 5px 25px 0px rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   background-repeat: no-repeat;
