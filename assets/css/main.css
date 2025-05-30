@@ -218,8 +218,8 @@ h6 {
 }
 
 .scrolled .header .logo img {
-  max-height: 90px;
-  margin-right: 1px;
+  max-height: 80px;
+  margin-right: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -952,6 +952,18 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
+.carousel-caption h5 {
+  color: #000;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.carousel-caption p {
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+}
+
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
@@ -960,6 +972,9 @@ section,
 
 .gallery .gallery-item img {
   transition: 0.3s;
+  width: 55vh;
+  height: auto;
+  border-radius: 10px;
 }
 
 .gallery .gallery-links {
