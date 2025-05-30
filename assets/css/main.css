@@ -761,6 +761,14 @@ h6 {
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
+.sectionMaps {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+}
+
 section,
 .section {
   color: var(--default-color);
@@ -858,11 +866,25 @@ section,
 /*--------------------------------------------------------------
 # banner Section
 --------------------------------------------------------------*/
+.banner-gestante {
+  background-image: url("../img/ensaios/Capas/gestante.jpg");
+}
+
+.banner-casal {
+  background-image: url("../img/ensaios/Capas/");
+}
+
+.banner-bebe {
+  background-image: url("../img/ensaios/Capas/bebe.jpg");
+}
+
+
 #banner {
   width: 100%;
   height: 100vh;
-  background: url("../img/ensaios/Capas/gestante.jpg") top center no-repeat;
   background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -877,6 +899,7 @@ section,
   left: 0;
   right: 0;
 }
+
 
 #banner .banner-container {
   position: absolute;
@@ -1484,6 +1507,7 @@ section,
   width: 100%;
   height: 500px;
   overflow: hidden;
+  padding: 0px;
 }
 
 .contact .map-section iframe {
@@ -1500,113 +1524,7 @@ section,
   z-index: 10;
 }
 
-.contact .contact-form-wrapper {
-  background-color: #333320;
-  border-radius: 12px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-  padding: 40px;
-}
 
-.contact .contact-form-wrapper h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.contact .contact-form-wrapper h2:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background-color: var(--accent-color);
-}
-
-.contact .contact-form-wrapper .form-group {
-  margin-bottom: 20px;
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon {
-  position: relative;
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon i {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 18px;
-  z-index: 10;
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon i.message-icon {
-  top: 28px;
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon textarea+i {
-  top: 25px;
-  transform: none;
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon .form-control {
-  border-radius: 8px;
-  padding: 12px 15px 12px 45px;
-  height: 3.5rem;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  font-size: 15px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon .form-control:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 90%);
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon .form-control::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.contact .contact-form-wrapper .form-group .input-with-icon textarea.form-control {
-  height: 180px;
-  resize: none;
-  padding-top: 15px;
-}
-
-.contact .contact-form-wrapper .btn-submit {
-  background-color: var(--accent-color);
-  border: none;
-  color: var(--contrast-color);
-  padding: 12px 30px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-
-.contact .contact-form-wrapper .btn-submit:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
-}
-
-.contact .contact-form-wrapper .btn-submit:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-
-.contact .contact-form-wrapper .loading,
-.contact .contact-form-wrapper .error-message,
-.contact .contact-form-wrapper .sent-message {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
 
 @media (max-width: 992px) {
   .contact .form-container-overlap {
