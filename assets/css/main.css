@@ -16,7 +16,7 @@
 }
 
 :root {
-  --background-color: #d7d3b3;
+  --background-color: #f2e2d5;
   --default-color: #ae6332;
   --heading-color: #ae6332;
   --accent-color: #a09a75;
@@ -870,12 +870,32 @@ section,
   background-image: url("../img/ensaios/Capas/gestante.jpg");
 }
 
-.banner-casal {
-  background-image: url("../img/ensaios/Capas/");
+.banner-acompanhamento {
+  background-image: url("../img/ensaios/Capas/acompanhamento.jpg");
 }
 
-.banner-bebe {
-  background-image: url("../img/ensaios/Capas/bebe.jpg");
+.banner-one {
+  background-image: url("../img/ensaios/Capas/One.jpg");
+}
+
+.banner-newborn {
+  background-image: url("../img/ensaios/Capas/nmwborn.jpg");
+}
+
+.banner-familia {
+  background-image: url("../img/ensaios/Capas/familia.jpg");
+}
+
+.banner-aniversario {
+  background-image: url("../img/ensaios/Capas/aniversario.jpg");
+}
+
+.banner-corporativo {
+  background-image: url("../img/ensaios/Capas/corporativo.jpg");
+}
+
+.banner-infantil {
+  background-image: url("../img/ensaios/Capas/festa.jpg");
 }
 
 
@@ -1062,6 +1082,20 @@ section,
   font-size: 20px;
 }
 
+.about .about-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.about .about-item img {
+  transition: 0.3s;
+}
+
+.about .about-item:hover img {
+  transform: scale(1.1);
+}
+
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -1089,6 +1123,8 @@ section,
   border-radius: 15px;
   background-repeat: no-repeat;
   margin-bottom: 30px;
+  height: auto;
+  width: 57vh;
 }
 
 .about .icone {
@@ -1312,12 +1348,14 @@ section,
 }
 
 .gallery-details .portfolio-description h2 {
-  font-size: 26px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .gallery-details .portfolio-description p {
+  font-size: 16px;
+  font-weight: 500;
   padding: 0;
 }
 
