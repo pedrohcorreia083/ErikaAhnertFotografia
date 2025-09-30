@@ -15,6 +15,10 @@
   --nav-font: century-ghotic;
 }
 
+.carousel-indicators {
+  display: none !important;
+}
+
 :root {
   --background-color: #f2e2d5;
   --default-color: #ae6332;
@@ -772,7 +776,6 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 100px;
   overflow: clip;
@@ -845,86 +848,331 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+.hero {
   position: relative;
-  max-width: 100%;
-  height: 100vh;
-  background: url("../img/banner.png") top center no-repeat;
-  background-size: cover;
-  padding: 0;
   overflow: hidden;
 }
 
-#hero .carousel-container {
+.hero .hero-wrapper {
+  position: relative;
+  width: 102%;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  height: 70vh;
-  padding-top: 60px;
+  padding: 120px 0 60px 0;
+
 }
 
-@media (max-width: 740px) {
-  #hero {
-    margin-top: 60px;
-    width: 100%;
-    height: 23vh;
-  }
-}
-
-.hero-waves {
-  display: block;
+.hero .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero .hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.hero .hero-content {
+  position: absolute;
+  /* sobrepõe o carrossel */
+  top: 50%;
+  /* centraliza verticalmente */
+  left: 50%;
+  /* centraliza horizontalmente */
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  /* acima da imagem */
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  /* remove espaçamentos extras */
+}
+
+.hero .hero-content .content-box {
+  padding: 0;
+  /* remove o espaço preto */
+}
+
+.hero .hero-content .logo-banner {
+  width: 25%;
+  /* ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+.hero .hero-content .content-box .badge-accent {
+  display: inline-block;
+  color: var(--contrast-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero .hero-content .content-box h1 {
+  font-size: 3.0rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero .hero-content .logo-banner {
+  height: auto;
+  width: 30%;
+}
+
+.hero .hero-content .content-box p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero .hero-content .content-box .cta-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero .hero-content .content-box .cta-group .btn {
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.hero .hero-content .content-box .cta-group .btn.btn-primary {
+  border: 2px solid var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.hero .hero-content .content-box .cta-group .btn.btn-primary:hover {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.hero .hero-content .content-box .cta-group .btn.btn-outline {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.hero .hero-content .content-box .cta-group .btn.btn-outline:hover {
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.hero .hero-content .content-box .info-badges {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero .hero-content .content-box .info-badges .badge-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero .hero-content .content-box .info-badges .badge-item i {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.hero .hero-content .content-box .info-badges .badge-item .badge-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .hero-content .content-box .info-badges .badge-item .badge-content span {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 0.9rem;
+}
+
+.hero .hero-content .content-box .info-badges .badge-item .badge-content strong {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.hero .features-wrapper {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  padding: 2rem;
+  margin-top: 15px;
+}
+
+.hero .features-wrapper .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.hero .features-wrapper .feature-item .feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
   height: 60px;
-  position: relative;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
-.wave1 use {
-  animation: move-forever1 10s linear infinite;
-  animation-delay: -2s;
+.hero .features-wrapper .feature-item .feature-icon i {
+  font-size: 1.8rem;
+  color: var(--accent-color);
 }
 
-.wave2 use {
-  animation: move-forever2 8s linear infinite;
-  animation-delay: -2s;
+.hero .features-wrapper .feature-item .feature-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.wave3 use {
-  animation: move-forever3 6s linear infinite;
-  animation-delay: -2s;
+.hero .features-wrapper .feature-item .feature-text p {
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 0;
 }
 
-@keyframes move-forever1 {
-  0% {
-    transform: translate(85px, 0%);
+@media (max-width: 1200px) {
+  .hero .hero-content .content-box h1 {
+    font-size: 3rem;
   }
 
-  100% {
-    transform: translate(-90px, 0%);
-  }
-}
-
-@keyframes move-forever2 {
-  0% {
-    transform: translate(-90px, 0%);
-  }
-
-  100% {
-    transform: translate(85px, 0%);
+  .hero .floating-features .features-wrapper {
+    padding: 1.5rem;
+    gap: 1rem;
   }
 }
 
-@keyframes move-forever3 {
-  0% {
-    transform: translate(-90px, 0%);
+@media (max-width: 992px) {
+  .hero .hero-wrapper {
+    height: auto;
+    min-height: 600px;
   }
 
-  100% {
-    transform: translate(85px, 0%);
+  .hero .hero-content .content-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .floating-features {
+    position: relative;
+    transform: translateY(0);
+    padding: 3rem 0;
+  }
+
+  .hero .floating-features .features-wrapper {
+    flex-direction: column;
+  }
+
+  .hero .floating-features .features-wrapper .feature-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .hero .floating-features .features-wrapper .feature-item:last-child {
+    border-bottom: none;
   }
 }
+
+/* Desktop */
+@media (min-width: 769px) {
+  .hero {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero .hero-wrapper {
+    position: relative;
+    width: 100%;
+    /* ocupa a tela toda */
+    display: flex;
+    align-items: center;
+    min-height: auto;
+    /* remove aquele min-height que você colocou */
+  }
+
+  .hero .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero .hero-content {
+    position: absolute;
+    /* fica sobre o carrossel */
+    top: 50%;
+    /* meio da tela */
+    left: 5%;
+    /* encostada no lado esquerdo */
+    transform: translateY(-50%);
+    z-index: 5;
+    padding: 0;
+  }
+
+  .hero .hero-content .content-box {
+    padding: 0;
+    /* sem espaço extra */
+  }
+
+  .hero .hero-content .logo-banner {
+    width: 30%;
+    /* aumenta no mobile se quiser */
+    height: auto;
+  }
+
+  .hero .hero-content .content-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .hero-content .content-box p {
+    font-size: 1rem;
+  }
+
+  .hero .hero-content .content-box .cta-group {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero .hero-content .content-box .cta-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-content .content-box .info-badges {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .hero-content .content-box {
+    padding: 1rem 0;
+  }
+
+  .hero .hero-content .content-box h1 {
+    font-size: 1.8rem;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # banner Section
